@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileTab">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <ImageButton
+        android:id="@+id/profileImage_ImageButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/profile_icon"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+    </ImageButton>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage_ImageButton">
+
+
+        <TextView
+            android:id="@+id/emailId_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="eaxmple@123.com"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/username_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="emaple_id"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary">
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <ViewSwitcher
+                android:id="@+id/firstName_ViewSwitcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:padding="2dp"
+                >
+
+                <TextView
+                    android:id="@+id/firstName_TextView_ViewSwitcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="textEnd"
+                    android:hint="First Name"
+                    android:padding="2dp"
+                    android:textSize="14sp"
+
+                    />
+
+                <EditText
+                    android:id="@+id/firstName_EditText_ViewSwitcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="textEnd"
+                    android:hint="First Name"
+                    android:textSize="14sp"
+                    android:singleLine="true" />
+            </ViewSwitcher>
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent">
+
+            </View>
+
+            <ViewSwitcher
+                android:id="@+id/lastName_ViewSwitcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/lastName_TextView_ViewSwitcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Last Name"
+                    android:textSize="14sp"
+                    android:textAlignment="textStart"
+                    android:padding="2dp"/>
+
+                <EditText
+                    android:id="@+id/lastName_editText_ViewSwitcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="14sp"
+                    android:textAlignment="textStart"
+                    android:hint="Last Name"
+                    android:singleLine="true"
+                    />
+            </ViewSwitcher>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ViewSwitcher
+                android:id="@+id/dob_ViewSwitcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:padding="2dp">
+
+                <TextView
+                    android:id="@id/dob_TextView_ViewSwitcher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:hint="Date of Birth"
+                    android:textSize="14sp" />
+
+            </ViewSwitcher>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/edit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/white_button"
+            android:fontFamily="@font/nirmala"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="Edit"></Button>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"></View>
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/white_button"
+            android:fontFamily="@font/nirmala"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="logOut" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
